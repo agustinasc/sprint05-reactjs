@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useProducts } from '../context/CartContext'
 
-export const AddProducts = () => {
+export const AddProduct = () => {
     const [ title, setTitle ] = useState([])
     const [ price, setPrice ] = useState([])
     const [ image, setImage ] = useState([])

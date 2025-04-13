@@ -31,10 +31,16 @@ export const ProductDetails = () => {
                 <p className="mb-2 text-gray-700">{product.description}</p>
                 <p className="mb-4 font-semibold text-lg text-gray-800">Precio: ${product.price}</p>
                 <button 
-                className="bg-[#5E272D] hover:bg-green-700 text-white px-4 py-2 rounded"
+                className="bg-[#5E272D] hover:bg-green-700 text-white px-4 py-2 rounded m-2"
                 onClick={() => addToCart(product)}
                 >
                 Agregar al carrito
+                </button>
+                <button 
+                className="bg-indigo-800 hover:bg-indigo-500 text-white px-4 py-2 rounded m-2"
+                onClick={() => navigate(`/producto/${id}/edit`)}
+                >
+                Editar producto
                 </button>
             </div>
         </div>

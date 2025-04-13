@@ -20,7 +20,7 @@ export const Products = () => {
 
                  {/* Card para Agregar Producto */}
                  <div className={`${theme === "oscuro" ? "flex flex-col bg-[#3E3E3E] items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 rounded-t-lg cursor-pointer hover:bg-[#4a4a4a]" : "flex flex-col bg-[#FAE5CF] items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 rounded-t-lg cursor-pointer hover:bg-[#f5d8b3]"}`}>
-                    <Link to="/add-productos" className="flex flex-col items-center w-full h-full">
+                    <Link to="/add-producto" className="flex flex-col items-center w-full h-full">
                         <div className="w-full h-80 bg-gray-300 dark:bg-gray-600 flex items-center justify-center rounded-lg mb-4">
                             <i className="bi bi-plus-circle text-6xl text-gray-700 dark:text-white"></i>
                         </div>

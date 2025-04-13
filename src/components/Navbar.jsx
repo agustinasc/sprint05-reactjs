@@ -125,13 +125,13 @@ export const Navbar = () => {
             <ul className='flex space-x-4 px-4'>
               {navbarRedes.map((link)=> (
                 <li key={link.id}>
-                  <Link 
-                  to={link.path}
+                  <a 
+                  href={link.link}
                   target="_blank"
                   >
                     <i className={`${link.icon} ${theme === "oscuro" ? "sm:text-2xl text-lg text-white transition-all duration-300 hover:text-yellow-500" : "sm:text-2xl text-lg text-black transition-all duration-300 hover:text-orange-800"}`}>
                     </i>                   
-                  </Link>
+                  </a>
               </li>
               )
               )}          

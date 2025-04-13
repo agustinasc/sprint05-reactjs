@@ -124,6 +124,14 @@ export const CartProvider = ({children}) => {
     setProducts((prev) => [...prev, data])
   }
 
+    /* EDUTAR UN PRODUCTO A LA LISTA DE PRODUCTOS: PUT */
+    const updateProduct = async (id, updateData) => {
+      const {data} = await axios.put(`${API}/${id}`, updateData)
+      setProducts((prev) =>
+        prev.map((product) => (product.id === id ? data : product))
+      )
+    }
+
 
     return (
         <CartContext.Provider value={{ 
@@ -138,7 +146,8 @@ export const CartProvider = ({children}) => {
           clearCart,
           loading, 
           setLoading,
-          createProduct
+          createProduct,
+          updateProduct
           }}>
             {children}
         </CartContext.Provider>

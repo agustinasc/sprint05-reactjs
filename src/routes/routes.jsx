@@ -3,38 +3,34 @@ import Contact from '../pages/Contact'
 import Nosotros from '../pages/Nosotros'
 import { Products } from '../pages/ProductList'
 import { ProductDetails } from '../pages/ProductDetails';
-import {NotFound} from '../pages/NotFound';
-import { AddProducts } from '../pages/AddProducts';
+import { NotFound } from '../pages/NotFound';
+import { AddProduct } from '../components/AddProduct';
+import { EditProduct } from '../components/EditProduct';
 
 
 export const routes = [
     {
-        path: '/',
-        element: <Home />
+        path: '/', element: <Home />
     },
     {
-        path: '/nosotros',
-        element: <Nosotros />
+        path: '/nosotros', element: <Nosotros />
     },
     {
-        path: '/contacto',
-        element: <Contact />
+        path: '/contacto', element: <Contact />
     },
     {
-        path: '*',
-        element: <NotFound />
+        path: '/productos', element: <Products />
+    },
+    { /* RUTAS DINAMICAS */
+        path: '/producto/:id', element: <ProductDetails />
+    },
+    {
+        path: '/add-producto', element: <AddProduct />
+    },
+    {
+        path: '/producto/:id/edit', element: <EditProduct />
+    },
+    { /* RUTA NO ENCONTRADA */
+        path: '*', element: <NotFound />
     }, 
-    {
-        path: '/productos',
-        element: <Products />
-    },
-    {
-        path: '/producto/:id',
-        element: <ProductDetails />
-    },
-    {
-        path: '/add-productos',
-        element: <AddProducts />
-    }
-
 ]
