@@ -42,5 +42,35 @@ Además, cuenta con funcionalidades administrativas para agregar y editar produc
 - Explora los productos disponibles y agrega los que desees al carrito.
 - Como administrador, accede a las funcionalidades para agregar o editar productos. 
 
+---
+
 ### Deployado en NETLIFY
 [Ver deployado](https://panificadoramathius.netlify.app/)
+
+## 🗂️ Estructura del proyecto
+
+panaderia-project/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AddProduct.jsx
+│   │   ├── EditProduct.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Loader.jsx
+│   │   ├── Navbar.jsx
+│   ├── context/
+│   │   └── CartContext.jsx
+│   │   ├── ThemeContext.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Nosotros.jsx
+│   │   ├── ProductList.jsx
+│   │   ├── ProductDetails.jsx
+│   │   └── NotFound.jsx
+│   ├── routes/
+│   │   └── routes.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md

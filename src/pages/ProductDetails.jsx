@@ -1,16 +1,56 @@
 import { useContext } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import { CartContext } from "../context/CartContext";
-
-
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 
 export const ProductDetails = () => {
     const { id } = useParams()
-    const { products, addToCart } = useContext(CartContext);
+    const { products, addToCart, deleteProduct } = useContext(CartContext);
     const navigate = useNavigate()
 
     const product = products.find((item) => item.id === id);
+
+    const handleDelete = async () => {
+        //const confirmDelete = window.confirm("Estas seguro que quieres eliminar este producto?")
+        const result = await Swal.fire({
+                title: "Queres eliminar este producto??",
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: "Eliminar",
+                denyButtonText: `No Eliminar`
+              })
+
+        if (result.isConfirmed){    
+            try {
+                await deleteProduct(id)
+                toast.success('Producto Eliminado!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    });
+                navigate('/productos')
+            } catch (error) {
+                toast.error('Error al eliminar el producto!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    });
+                console.error('error ->', error);              
+            }
+        }
+    }
   
     if (!product) {
       return <p className="text-center text-red-500 mt-10">Producto no encontrado</p>;
@@ -41,6 +81,12 @@ export const ProductDetails = () => {
                 onClick={() => navigate(`/producto/${id}/edit`)}
                 >
                 Editar producto
+                </button>
+                <button 
+                className="bg-rose-800 hover:bg-rose-500 text-white px-4 py-2 rounded m-2"
+                onClick={handleDelete}
+                >
+                Eliminar producto
                 </button>
             </div>
         </div>

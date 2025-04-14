@@ -132,6 +132,12 @@ export const CartProvider = ({children}) => {
       )
     }
 
+    /* ELIMINAR UN PRODUCTO A LA LISTA DE PRODUCTOS: DELETE */
+    const deleteProduct = async (id) => {
+      await axios.delete(`${API}/${id}`)
+      setProducts((prev) => prev.filter((profile) => profile.id !== id))
+    }
+ 
 
     return (
         <CartContext.Provider value={{ 
@@ -147,7 +153,8 @@ export const CartProvider = ({children}) => {
           loading, 
           setLoading,
           createProduct,
-          updateProduct
+          updateProduct,
+          deleteProduct
           }}>
             {children}
         </CartContext.Provider>

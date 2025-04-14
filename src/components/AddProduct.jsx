@@ -19,7 +19,7 @@ export const AddProduct = () => {
         }
         try {
             await createProduct({ title, image, price })
-            navigate('/products')
+            navigate('/productos')
           } catch (err) {
             setError('Error creando producto')
             console.log('err -> ', err)
