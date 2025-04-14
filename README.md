@@ -15,7 +15,7 @@ Aplicación web desarrollada con React para gestionar productos, visualizar deta
 
 Panificadora Mathius es una aplicación web diseñada para *mejorar la experiencia de compra en línea de una panadería artesanal*. 
 Permite a los usuarios explorar productos, ver detalles, agregar productos al carrito y gestionar pedidos. 
-Además, cuenta con funcionalidades administrativas para agregar y editar productos.
+Además, cuenta con funcionalidades administrativas para agregar, editar y eliminar productos.
  
 ## ✨ Características
 
@@ -23,8 +23,9 @@ Además, cuenta con funcionalidades administrativas para agregar y editar produc
 - Detalles individuales de cada producto.
 - Carrito de compras para gestionar pedidos.
 - Funcionalidades administrativas:
-- Agregar nuevos productos.
-- Editar productos existentes.
+-- Agregar nuevos productos.
+-- Editar productos existentes.
+-- Eliminar productos existentes.
 - Navegación intuitiva y diseño responsivo.
 - Integración con redes sociales.
 - Visualización en Modo Claro y Oscuro.
@@ -38,7 +39,7 @@ Además, cuenta con funcionalidades administrativas para agregar y editar produc
 - Vite 
 
 ## 🧑‍💻 Uso
-- Navega por las diferentes secciones: Inicio, Nosotros, Contacto y Productos.
+- Navega por las diferentes secciones: Inicio, Nosotros, Contacto y Lista de Productos.
 - Explora los productos disponibles y agrega los que desees al carrito.
 - Como administrador, accede a las funcionalidades para agregar o editar productos. 
 

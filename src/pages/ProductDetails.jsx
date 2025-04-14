@@ -70,24 +70,26 @@ export const ProductDetails = () => {
                 <img src={product.image} alt={product.name} className="max-w-sm w-full h-auto mb-4 mx-auto rounded" />
                 <p className="mb-2 text-gray-700">{product.description}</p>
                 <p className="mb-4 font-semibold text-lg text-gray-800">Precio: ${product.price}</p>
-                <button 
-                className="bg-[#5E272D] hover:bg-green-700 text-white px-4 py-2 rounded m-2"
-                onClick={() => addToCart(product)}
-                >
-                Agregar al carrito
-                </button>
-                <button 
-                className="bg-indigo-800 hover:bg-indigo-500 text-white px-4 py-2 rounded m-2"
-                onClick={() => navigate(`/producto/${id}/edit`)}
-                >
-                Editar producto
-                </button>
-                <button 
-                className="bg-rose-800 hover:bg-rose-500 text-white px-4 py-2 rounded m-2"
-                onClick={handleDelete}
-                >
-                Eliminar producto
-                </button>
+                <div>
+                    <button 
+                    className="bg-[#5E272D] hover:bg-green-700 text-white px-4 py-2 rounded m-2"
+                    onClick={() => addToCart(product)}
+                    >
+                    Agregar al carrito
+                    </button>
+                    <button 
+                    className="bg-indigo-800 hover:bg-indigo-500 text-white px-4 py-2 rounded m-2"
+                    onClick={() => navigate(`/producto/${id}/edit`)}
+                    >
+                    Editar producto
+                    </button>
+                    <button 
+                    className="bg-rose-800 hover:bg-rose-500 text-white px-4 py-2 rounded m-2"
+                    onClick={handleDelete}
+                    >
+                    Eliminar producto
+                    </button>
+                </div>
             </div>
         </div>
     );
